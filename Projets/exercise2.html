@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation de Nombres</title>
+    <script>
+        function calculer() {
+            let nombre = parseFloat(document.getElementById("nombre").value);
+            if (isNaN(nombre)) {
+                alert("Veuillez entrer un nombre valide.");
+                return;
+            }
+            document.getElementById("racine").innerText = "Racine carrée : " + Math.sqrt(nombre).toFixed(2);
+            document.getElementById("arrondi").innerText = "Arrondi : " + Math.round(nombre);
+        }
+
+        function Aleatoire() {
+            let randomNum = Math.floor(Math.random() * 100) + 1;
+            document.getElementById("aleatoire").innerText = "Nombre aléatoire : " + randomNum;
+        }
+
+        function Aleatoire2(min, max) {
+            let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+            document.getElementById("aleatoire").innerText = "Nombre aléatoire entre " + min + " et " + max + " : " + randomNum;
+        }
+    </script>
+</head>
+<body>
+    <div style="width: 40%; height: 500px; background-color: azure; border: 2px solid rgb(5, 5, 95); margin: 0px auto; border-radius: 15px; text-align: center;">
+    <h2>Manipulation de Nombres</h2>
+    <input type="number" id="nombre" placeholder="Entrez un nombre">
+    <button onclick="calculer()">Calculer</button>
+    <p id="racine"></p>
+    <p id="arrondi"></p>
+
+    <button onclick="Aleatoire()">Générer un nombre aléatoire (1-100)</button>
+    <button onclick="Aleatoire2(10, 50)">Générer un nombre aléatoire (10-50)</button>
+    <p id="aleatoire"></p>
+</div>
+</body>
+</html>

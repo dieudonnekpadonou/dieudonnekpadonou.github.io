@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation de Dates</title>
+    <script>
+        function traiterDate() {
+            let dateInput = document.getElementById("date").value;
+            let [jour, mois, annee] = dateInput.split("-");
+            let date = new Date(`${annee}-${mois}-${jour}`);
+            
+            if (isNaN(date)) {
+                alert("Date invalide !");
+                return;
+            }
+
+            document.getElementById("jour").innerText = "Jour : " + jour;
+            document.getElementById("mois").innerText = "Mois : " + mois;
+            document.getElementById("annee").innerText = "Année : " + annee;
+
+            let today = new Date();
+            let diffTime = today - date;
+            let diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            document.getElementById("difference").innerText = "Différence en jours : " + diffDays;
+        }
+    </script>
+</head>
+<body>
+    <div style="width: 40%; height: 500px; background-color: azure; border: 2px solid rgb(5, 5, 95); margin: 0px auto; border-radius: 15px; text-align: center;">
+        <h2>Manipulation de Dates</h2>
+        <input type="text" id="date" placeholder="JJ-MM-AAAA">
+        <button onclick="traiterDate()">Analyser</button>
+        <p id="jour"></p>
+        <p id="mois"></p>
+        <p id="annee"></p>
+        <p id="difference"></p>
+    </div>
+</body>
+</html>

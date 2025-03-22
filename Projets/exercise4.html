@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation de Tableaux</title>
+    <script>
+        let tableau = [5, 12, 8, 130, 44];
+
+        function afficherTableau() {
+            document.getElementById("tableau").innerText = "Tableau : " + tableau.join(", ");
+        }
+
+        function ajouterElement() {
+            let nombre = parseInt(prompt("Entrez un nombre à ajouter :"));
+            if (!isNaN(nombre)) {
+                tableau.push(nombre);
+                afficherTableau();
+            }
+        }
+
+        function supprimerElement() {
+            let nombre = parseInt(prompt("Entrez un nombre à supprimer :"));
+            tableau = tableau.filter(num => num !== nombre);
+            afficherTableau();
+        }
+
+        function trierTableau() {
+            tableau.sort((a, b) => a - b);
+            afficherTableau();
+        }
+    </script>
+</head>
+<body onload="afficherTableau()">
+    <div style="width: 40%; height: 500px; background-color: azure; border: 2px solid rgb(5, 5, 95); margin: 0px auto; border-radius: 15px; text-align: center;">
+        <h2>Manipulation de Tableaux</h2>
+        <p id="tableau"></p>
+        <button onclick="ajouterElement()">Ajouter un élément</button>
+        <button onclick="supprimerElement()">Supprimer un élément</button>
+        <button onclick="trierTableau()">Trier</button>
+    </div>
+</body>
+</html>

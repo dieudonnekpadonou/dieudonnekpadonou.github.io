@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portefolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="setwidth">
+                <a class="span" href="#">KPADONOU <span>G. DIEU-DONNE</span></a>
+                <ul>
+                    <li> 
+                        <a href="#section5">Contact</a>
+                    </li>
+                    <li> 
+                        <a href="#section4">Compétences</a>
+                    </li>
+                    <li> 
+                        <a href="#section3">Projets</a>
+                    </li>
+                    <li> 
+                        <a href="#section2">A Propos</a>
+                    </li>
+                    <li> 
+                        <a href="#">Accueil</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!--Section 1-->
+    <section id="section1">
+        <div class="setwidth">
+            <div class="divtext1">
+                <p>
+                    Je suis <span>Dieu-Donné</span>, Développeur
+                    en devenir passionné par le web et design !
+                </p>
+                <a  class="button" href="#section3">Voir mes projets</a>
+            </div>
+            <div class="image1">
+                <img src="media/Image1.jpg">
+            </div>
+        </div>
+    </section>
+
+
+<!--Section 2-->
+    <section id="section2">
+        <div class="setwidth">
+            <h2>A propos</h2>
+            <div class="divtext2">
+                <p>
+                    Je m'appelle <span>KPADONOU</span>, passionné par 
+                    la création de site web moderne et interactifs
+                </p>
+                <p>
+                    Je suis actuellement étudiant <span>développement web</span>, 
+                    et je cherche à ameliorer mes compétemces en 
+                    JavaScript, HTML et CSS.
+                </p>
+                <p>
+                    J'adore transformer mes idées en projets concrets 
+                    et expérimenter avec les nouvelles tecnologies.
+                </p>
+                <a  class="button" href="media/CV KPADONOU GBÈTONDÉ Dieu-Donné.pdf" 
+                download="media/CV KPADONOU GBÈTONDÉ Dieu-Donné.pdf" target="_blank">Télécharger mon CV</a>
+            </div>
+            <div class="image2">
+                <img src="media/me.jpg">
+            </div>
+        </div>
+    </section>
+
+
+<!--Section 3-->
+    <section id="section3">
+        <div class="setwidth">
+            <h2>Mes Projets</h2>
+            <div class="divtext3">
+                <p>
+                    Un mini projet qui fait des calcules à base des nombres saisis.
+                </p>
+                
+                <p>#HTLM, #CSS, #Js</p>
+                <a  class="button" href="Projets/exercise2.html" target="_blank">Voir</a>
+            </div>
+            <div class="divtext3">
+                <p>
+                    Un mini projet qui gère la manipulation des date à base d'une date entrée.
+                </p>
+               
+                <p>#HTLM, #CSS, #Js</p>
+                <a  class="button" href="Projets/exercise3.html" target="_blank">Voir</a>
+            </div>
+            <div class="divtext3">
+                <p>
+                    Un mini projet qui gère la manipulation des éléments d'un tableau.
+                </p>
+               
+                <p>#HTLM, #CSS, #Js</p>
+                <a  class="button" href="Projets/exercise4.html" target="_blank">Voir</a>
+            </div>
+            
+        </div>
+    </section>
+
+
+<!--Section 4-->
+    <section id="section4">
+        <div class="setwidth">
+            <h2>Mes Compétences</h2>
+            <div class="divprogress">
+                <h3>Soft Skills</h3>
+                <p>Gestion de projets</p>
+                <progress value="60" max="100"></progress>
+
+                <p>Coaching et motivation</p>
+                <progress value="45" max="100"></progress>
+
+                <p>Conseillé en entreprise</p>
+                <progress value="80" max="100"></progress>
+            </div>
+            <div class="divprogress">
+                <h3>Hard Skills</h3>
+                <p>HTLM</p>
+                <progress value="60" max="100"></progress>
+
+                <p>CSS</p>
+                <progress value="45" max="100"></progress>
+
+                <p>JavaScript</p>
+                <progress value="30" max="100"></progress>
+                <p>VS Code</p>
+                <progress value="85" max="100"></progress>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <!-- Section 5 formulaire-->
+    <section id="section5">
+        <div class="setwidth">
+            <div class="deuxp">
+                <p class="s5p1">Si vous avez un <span class="ssp">projet de en tête</span></p>
+                <p class="s5p2">N'hésitez pas à me <span class="ssp">contacter</span></p>
+            </div>
+            <form id="myForm" novalidate>
+                <div class="form-row">
+                    <div class="form-groupe">
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" minlength="2" maxlength="20" required>
+                    </div>
+                    <div class="form-groupe">
+                        <label for="prenom">Prénom(s) :</label>
+                        <input type="text" id="prenom" name="prenom" minlength="2" maxlength="20" required>
+                    </div>
+                </div>
+                <label for="sujet">Votre sujet :</label>
+                <input type="text" id="sujet" name="sujet" required>
+        
+                <label for="description"></label>
+                <textarea name="description" id="description" placeholder="Description de votre projet" rows="15" required></textarea>
+                <button type="submit">Envoyer</button>
+                <p id="errorMessage" class="error"></p>
+            </form>
+        
+            <script>
+                document.getElementById("myForm").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Empêche l'envoi du formulaire
+
+                    let nom = document.getElementById("nom").value.trim();
+                    let prenom = document.getElementById("prenom").value.trim();
+                    let sujet = document.getElementById("sujet").value.trim();
+                    
+                    let description = document.getElementById("description").value.trim();
+                    let errorMessage = document.getElementById("errorMessage");
+
+                    errorMessage.textContent = ""; // Réinitialise le message d'erreur
+
+                    if (nom === "") {
+                        errorMessage.textContent = alert("Le nom est requis.");
+                        return;
+                    }
+                    if (prenom === "") {
+                        errorMessage.textContent = alert("Le prenom est requis.");
+                        return;
+                    }
+                    if (sujet === "") {
+                        errorMessage.textContent = alert("Ce champ est obligatoire.");
+                        return;
+                    }
+                    if (description === "") {
+                        errorMessage.textContent = alert("Ce champ est obligatoire.");
+                        return;
+                    }else{
+                        alert("Votre projet a été envoyé avec succès!");
+                    }
+                    
+                    this.reset(); // Réinitialise le formulaire
+                });
+            </script>
+        
+        </div>
+    </section>
+    <footer>
+        <div class="setwidth">
+            <h3 class="h3_1">Designed by <span>Dieu-Donné KPADONOU</span> with HTML CSS JavaScript</h3>
+            <h3 class="h3_2">Tout droits réservés-2025</h3>
+        </div>
+    </footer>
+</body>
+</html>
