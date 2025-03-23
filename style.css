@@ -3,7 +3,7 @@ body{
     padding: 0px;
     margin: 0px;
     font-family:Lato, Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 13px;
+    font-size: 100%;
 }
 a{
     text-decoration: none;
@@ -11,16 +11,16 @@ a{
 }
 
 .setwidth{
-    width: 80%;
+    width: 90%;/*modivifié*/
     margin: 0px auto;
 }
 
 h2{
-    font-size: 20px;
+    font-size: clamp(0.75rem, 1.5vw, 2rem); /*modivifié*/
     color: rgb(25, 211, 211);
     font-weight: bold;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 3%;  /*A modifier,,,,,,,,,,,,,,,,,,,,*/
 }
 
 
@@ -28,17 +28,17 @@ h2{
 /* Mise en forme du header*/
 header{
     background-color: rgb(0, 4, 22);
-    height: 120px;
+    height: clamp(5rem, 10vw, 15rem);/*modivifié*/
     width: 100%;
    
 }
 
 .span{
     float: left;
-    font-size: 20px;
+    font-size: clamp(0.5rem, 1.5vw, 2rem);/*modivifié*/
     font-weight: bold;
     color: white;
-    margin-top: 50px;
+    margin-top: clamp(2rem, 4vw, 7rem);/*modivifié*/
 }
 span{
     color: rgb(25, 211, 211);
@@ -46,10 +46,11 @@ span{
 
 
 nav li {
+    font-size: clamp(0.5rem, 1.3vw, 2rem);/*modivifié*/
     float: right;
-    margin-left: 30px;
-    padding-right: 20px;
-    margin-top: 50px;
+    margin-left: clamp(0.5rem, 2vw, 4rem);/*modivifié*/
+                                            /*suprimé*/
+    margin-top: clamp(2rem, 4.5vw, 7rem);/*modivifié*/
     list-style: none;
 }
 
@@ -57,43 +58,48 @@ nav li a:hover{
     color: aqua;
 }
 
-.button{
-    background-color: rgb(25, 211, 211);
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 15px;
-    
-}
 
 
 /*Mise en forme section1*/
 #section1{
-    height: 500px;
+    height: clamp(10rem, 40vw, 60rem);/*modivifié*/
 }
 .divtext1{
-    width: 60%;
-    font-size: 30px;
+    width: 58%;
+    font-size: clamp(0.5rem, 2vw, 3rem);/*modivifié*/
+    font-weight: bold;
     text-align: center;
-    margin-top: 100px;
+    margin-top: clamp(5rem, 10vw, 15rem);/*modivifié*/
     float: left;
 }
 .image1{
     width: 30%;
     float: right;
-    margin-right: 20px;
+    margin-right: clamp(3rem, 6vw, 9rem);/*modivifié*/
 }
 .image1 img{
     width: 100%;
-    margin-top: 100px;
+    margin-top: clamp(4rem, 8vw, 12rem);/*modivifié*/
 }
 
-
+.button{
+    background-color: rgb(25, 211, 211);
+    width: 25%;/*modivifié*/
+    margin: 0px auto;
+    height: clamp(0.5rem, 2vw, 3.5rem);/*modivifié*/
+    margin-top: clamp(2rem, 4.5vw, 7rem);/*modivifié*/
+    padding: clamp(0.5rem, 0.75vw, 1rem);/*modivifié*/
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: clamp(0.3rem, 1.3vw, 2rem);/*modivifié*/
+}
 
 
 /*Mise en forme section2*/
 #section2{
-    height: 500px;
+    height: clamp(15rem, 40vw, 60rem);/*modivifié*/
     background-color: #eee;
     border-left: 2px solid black;
     border-right: 2px solid black;
@@ -101,48 +107,48 @@ nav li a:hover{
 }
 .divtext2{
     width: 50%;
-    font-size: 17px;
+    font-size: clamp(0.6rem, 1.2vw, 2rem);/*modivifié*/
     text-align:left;
-    margin-top: 100px;
+    margin-top: clamp(0.6rem, 3vw, 5rem);/*modivifié*/
     float: left;
 }
 .image2{
-    width: 20%;
+    width: 22%;
     float: right;
-    margin-right: 100px;
+    margin-right: clamp(3rem, 6vw, 9rem);/*modivifié*/
 }
 .image2 img{
     width: 100%;
-    margin-top: 100px;
+    margin-top: clamp(2rem, 4vw, 6rem);/*modivifié*/
     border-radius: 50%;
     border: 4px solid  rgb(25, 211, 211);
 }
-
-.button{
+.button2{
     background-color: rgb(25, 211, 211);
-    width: 200px;
-    height: 40px;
+    width: 35%;/*modivifié*/
+    height: clamp(0.5rem, 2vw, 3.5rem);/*modivifié*/
+    margin-top: clamp(0.5rem, 1.5vw, 2rem);/*modivifié*/
+    padding: clamp(0.5rem, 1vw,  1.25rem);/*modivifié*/
     color: white;
     border-radius: 5px;
+    text-align: center;
     border: none;
     font-weight: bold;
-    font-size: 15px;
-    padding: 10px;
+    font-size: clamp(0.4rem, 1.2vw, 2rem);/*modivifié*/
 }
-
 
 
 /*Mise en forme section3*/
 #section3{
-    height: 500px;
+    height: clamp(15rem, 30vw, 45rem);/*modivifié*/
 }
 .divtext3{
     width: 30%;
-    height: 200px;
+    height: clamp(10rem, 15vw, 20rem);/*modivifié*/
     border-radius: 15px;
-    font-size: 15px;
+    font-size: clamp(0.6rem, 1.2vw, 2rem);/*modivifié*/
     text-align:center;
-    margin: 16px;
+    margin: clamp(0.4rem, 1vw, 1.5rem);/*modivifié*/
     float: left;
     background-color: #eee;
 }
@@ -152,51 +158,39 @@ nav li a:hover{
 }
 
 
-.button{
-    background-color: rgb(25, 211, 211);
-    width: 200px;
-    height: 40px;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 10px;
-    
-}
+
 
 /* Mise en forme section4 */
 #section4{
     background-color: #eee;
-    height: 500px;
+    height: clamp(20rem, 40vw, 60rem);/*modivifié*/
 }
 .divprogress{
     width: 35%;
-    height: 250px;
+    height: clamp(10rem, 20vw, 30rem);/*modivifié*/
     border-radius: 10px;
-    font-size: 12px;
+    font-size: clamp(0.6rem, 0.8vw, 2rem);/*modivifié*/
     text-align:left;
-    margin: 60px;
+    margin: clamp(0.4rem, 6vw, 9rem);/*modivifié*/
     float: left;
     background-color: #fff;
     box-shadow: 1px 1px 5px rgb(109, 102, 102);
-   
 }
 
 .divprogress progress{
     width: 80%;
-    margin-left: 25px;
-    height: 20px;
+    margin-left: clamp(1rem, 3vw, 6rem);/*modivifié*/
+    height: clamp(0.5rem, 1.5vw, 2rem);/*modivifié*/
 }
 
 .divprogress p{
-    margin-left: 25px;
+    margin-left: clamp(1rem, 3vw, 6rem);/*modivifié*/
     margin-bottom: 0px;
 }
 
 .divprogress h3{
     text-align: center;
-    margin: 20px;
+    margin: clamp(0.4rem, 1.2vw, 2rem);/*modivifié*/
 }
 
 
@@ -205,90 +199,80 @@ nav li a:hover{
 
 #section5{
     background-color: rgb(0, 4, 22);
-    height: 650px;
+    height: clamp(40rem, 50vw, 65rem);/*modivifié*/
     justify-content: center;
     
 }
-form {
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction:column;
-}
-
-
-/*alignement des deux premiers champs*/
-.form-row{
-    display: flex;
-    gap: 20px;/*Espacement entre les champ*/
-}
-.form-groupe{
-    display: flex;
-    flex-direction: column; /* place les labels au dessus*/
-    flex: 1; /* permet aux champs d' occuper un espace égal*/
-}
-
-#nom{
-    text-transform: uppercase;
-}
-#prenom{
-    text-transform: capitalize;
-}
-
 
 .deuxp{
-    padding-top: 50px;
+    padding-top: clamp(0.5rem, 5vw, 7rem);/*modivifié*/
+    padding-bottom: clamp(0.5rem, 3vw, 4rem);/*modivifié*/
     text-align: center;
-    font-size: 26px;
+    font-size: clamp(0.5rem, 2.2vw, 3rem);/*modivifié*/
     color: #fff;
     font-weight: bold;
     line-height: 3px;
 }
 
-
-
-label {
-    margin-top: 10px;
-    font-weight: bold;
+#myForm {
+    max-width: 45%;
+    margin: auto;
     color: #fff;
 }
 
-input {
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-textarea{
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    resize: none;
+.row {
+    display: flex;
+    gap: 10px;
 }
 
-button {
-    width: 150px;
+.row div {
+    flex: 1;
+}
+
+label {
+    display: block;
     font-weight: bold;
-    font-size: 15px;
-    margin-top: 15px;
-    padding: 10px;
-    margin: 15px auto;
-    background: rgb(25, 211, 211);
+    margin-bottom: 5px;
+    font-size: clamp(0.7rem, 1vw, 1.3rem);/*modivifié*/
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+button {
+    background-color: rgb(25, 211, 211);
+    width: 25%;/*modivifié*/
+    height: clamp(1rem, 2vw, 3.5rem);/*modivifié*/
     color: white;
+    border-radius: 5px;
     border: none;
-    border-radius: 4px;
+    font-weight: bold;
+    font-size: clamp(0.3rem, 1.3vw, 2rem);/*modivifié*/
     cursor: pointer;
+    display: block;
+    margin: 20px auto;
 }
 
 button:hover {
     background: darkblue;
 }
+
+
+/* mise en forme du footer*/
 footer{
-    height: 100px;
-    font-size: 10px;
+    height: clamp(5rem, 8vw, 12rem);/*modivifié*/
+    font-size: clamp(0.6rem, 1vw, 1.3rem);/*modivifié*/
     font-style: italic;
 }
 
@@ -300,6 +284,42 @@ footer{
 .h3_2{
     float: right;
     padding-top: 25px;
+}
+
+
+
+#myForm {
+    max-width: 45%;
+    margin: auto;
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row div {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 10px;
 }
 
 

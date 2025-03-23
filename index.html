@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portefolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,9 +39,9 @@
             <div class="divtext1">
                 <p>
                     Je suis <span>Dieu-Donné</span>, Développeur
-                    en devenir passionné par le web et design !
+                    en devenir passionné par le web et le design !
                 </p>
-                <a  class="button" href="#section3">Voir mes projets</a>
+                <a href="#section3"><p class="button">Voir mes projets</p></a>
             </div>
             <div class="image1">
                 <img src="media/Image1.jpg">
@@ -56,11 +56,11 @@
             <h2>A propos</h2>
             <div class="divtext2">
                 <p>
-                    Je m'appelle <span>KPADONOU</span>, passionné par 
+                    Je m'appelle <span>KPADONOU G. Dieu-donné</span>, passionné par 
                     la création de site web moderne et interactifs
                 </p>
                 <p>
-                    Je suis actuellement étudiant <span>développement web</span>, 
+                    Je suis actuellement étudiant en <span>développement web</span>, 
                     et je cherche à ameliorer mes compétemces en 
                     JavaScript, HTML et CSS.
                 </p>
@@ -68,8 +68,8 @@
                     J'adore transformer mes idées en projets concrets 
                     et expérimenter avec les nouvelles tecnologies.
                 </p>
-                <a  class="button" href="media/CV KPADONOU GBÈTONDÉ Dieu-Donné.pdf" 
-                download="media/CV KPADONOU GBÈTONDÉ Dieu-Donné.pdf" target="_blank">Télécharger mon CV</a>
+                <a href="media/CV KPADONOU GBÈTONDÉ Dieu-Donné.pdf" 
+                download="media/CV KPADONOU GBÈTONDÉ Dieu-Donné.pdf" target="_blank"><p class="button2">Télécharger mon CV</p></a>
             </div>
             <div class="image2">
                 <img src="media/me.jpg">
@@ -151,26 +151,34 @@
                 <p class="s5p1">Si vous avez un <span class="ssp">projet de en tête</span></p>
                 <p class="s5p2">N'hésitez pas à me <span class="ssp">contacter</span></p>
             </div>
+    
             <form id="myForm" novalidate>
-                <div class="form-row">
-                    <div class="form-groupe">
+                <div class="row">
+                    <div>
                         <label for="nom">Nom :</label>
-                        <input type="text" id="nom" name="nom" minlength="2" maxlength="20" required>
+                        <input type="text" id="nom" name="nom" required>
                     </div>
-                    <div class="form-groupe">
-                        <label for="prenom">Prénom(s) :</label>
-                        <input type="text" id="prenom" name="prenom" minlength="2" maxlength="20" required>
+                    <div>
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom" required>
                     </div>
                 </div>
-                <label for="sujet">Votre sujet :</label>
-                <input type="text" id="sujet" name="sujet" required>
         
-                <label for="description"></label>
-                <textarea name="description" id="description" placeholder="Description de votre projet" rows="15" required></textarea>
+                <div class="full-width">
+                    <label for="sujet">Votre sujet :</label>
+                    <input type="text" id="sujet" name="sujet" required>
+                </div>
+        
+                <div class="full-width">
+                    <label for="message"></label>
+                    <textarea id="message" name="message" rows="15"  placeholder="Description de votre sujet "></textarea>
+                </div>
+        
                 <button type="submit">Envoyer</button>
                 <p id="errorMessage" class="error"></p>
             </form>
-        
+    
+
             <script>
                 document.getElementById("myForm").addEventListener("submit", function(event) {
                     event.preventDefault(); // Empêche l'envoi du formulaire
@@ -179,7 +187,7 @@
                     let prenom = document.getElementById("prenom").value.trim();
                     let sujet = document.getElementById("sujet").value.trim();
                     
-                    let description = document.getElementById("description").value.trim();
+                    let message = document.getElementById("message").value.trim();
                     let errorMessage = document.getElementById("errorMessage");
 
                     errorMessage.textContent = ""; // Réinitialise le message d'erreur
@@ -193,11 +201,11 @@
                         return;
                     }
                     if (sujet === "") {
-                        errorMessage.textContent = alert("Ce champ est obligatoire.");
+                        errorMessage.textContent = alert("Le champ sujet est obligatoire.");
                         return;
                     }
-                    if (description === "") {
-                        errorMessage.textContent = alert("Ce champ est obligatoire.");
+                    if (message === "") {
+                        errorMessage.textContent = alert("Le champ description est obligatoire.");
                         return;
                     }else{
                         alert("Votre projet a été envoyé avec succès!");
@@ -206,12 +214,11 @@
                     this.reset(); // Réinitialise le formulaire
                 });
             </script>
-        
         </div>
     </section>
     <footer>
         <div class="setwidth">
-            <h3 class="h3_1">Designed by <span>Dieu-Donné KPADONOU</span> with HTML CSS JavaScript</h3>
+            <h3 class="h3_1">Designed by <span>Dieu-Donné</span> with HTML CSS JavaScript</h3>
             <h3 class="h3_2">Tout droits réservés-2025</h3>
         </div>
     </footer>
